@@ -1,0 +1,43 @@
+:root {
+--header: #f0f8ff;
+--main: #ffe4c4;
+--tasks: #9CAF88;
+--weather: #9C9C53;
+--apod: #A4BDBA;
+--footer: #f0a8fa;
+}
+
+
+header {
+    background-color: var(--header);
+    width: 100vw;
+    padding-bottom: 20px;
+}
+
+#main-container {
+    background-color: var(--main);
+    padding-bottom: 20px;
+    
+}
+
+#taskTable {
+    background-color: var(--tasks);
+    height: 20vh;
+    margin: 20px;
+}
+
+#cityWeather {
+    background-color: var(--weather);
+    height: 20vh;
+    margin: 20px;
+}
+
+#apodImageInfo {
+    background-color: var(--apod);
+    margin: 20px;
+}
+
+footer {
+background-color: var(--footer);
+height: 10vh;
+}
