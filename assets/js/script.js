@@ -13,42 +13,59 @@ setInterval(showDate, 10000); // call for the current hour every second
 const url = 'https://api.nasa.gov/planetary/apod?api_key='
 const api_key = config.NASA_API_KEY
 
-const fetchNASAData = async () => {
-    try {
-      const response = await fetch(`${url}${api_key}`)
-      const data = await response.json()
-      console.log('NASA APOD data', data)
-      displayData(data)
-    } catch (error) {
-      console.log(error)
-    }
-  }
+      fetch(`${url}${api_key}`)
+        .then(function(response){
+          return response.json();
+        })
+        .then(function (data) {
+          document.getElementById('title').textContent = data.title
+          document.getElementById('date').textContent = data.date
+          document.getElementById('picture').src = data.hdurl
+          document.getElementById('explanation').textContent = data.explanation
+          console.log(data)
+        });
+      
+       
   
-  const displayData = data => {
-    document.getElementById('title').textContent = data.title
-    document.getElementById('date').textContent = data.date
-    document.getElementById('picture').src = data.hdurl
-    document.getElementById('explanation').textContent = data.explanation
-  }
-  
-  fetchNASAData()
 
   // This is used for Calling Open Weather API
 const urlWeather = 'https://api.openweathermap.org/data/2.5/onecall?lat=52.52&lon=13.405&exclude=hourly,daily&units=metric&appid='
 const api_key_2 = config.OPEN_WEATHER_API_KEY
 
-const fetchWeatherData = async () => {
-    try {
-      const response = await fetch(`${urlWeather}${api_key_2}`)
-      const data = await response.json()
-      console.log('Weather data', data)
-      displayData_2(data)
-    } catch (error) {
-      console.log(error)
-    }
-  }
-  const displayData_2 = data => {
-    document.getElementById('temp').textContent = data.timezone + ': ' + data.current.temp + ' °C ' 
-  }
-  
-  fetchWeatherData()
+
+  fetch(`${urlWeather}${api_key_2}`)
+    .then(function(response){
+      return response.json(); 
+      
+      
+      })
+      .then(function (data){
+        let iconurl = "http://openweathermap.org/img/w/" + data.current.weather[0].icon + ".png"
+        $('#wicon').attr('src', iconurl);
+        document.getElementById('city').textContent = 'City:' +' ' +  data.timezone
+        document.getElementById('temp').textContent = data.current.temp + ' ' + ' °C'
+        document.getElementById('date1').textContent = new Date(data.current.dt*1000).toLocaleDateString("en-GB", {day: "numeric", month:  "short", year: "numeric"});
+        document.getElementById('time').textContent = new Date(data.current.dt*1000).toLocaleDateString("en-GB", {weekday: "short", hour: "numeric", minute: "numeric"});
+        console.log(data)
+      });
+      
+  // this saves the list of cities
+  // $( function() {
+  //   var availableTags = [
+  //     "Berlin",
+  //     "New Delhi",
+  //     "Chicago",
+  //     "London",
+  //     "Paris",
+  //     "San Francisco",
+  //     "New York",
+  //     "Barcelona",
+  //     "Madrid",
+  //     "Athens",
+  //     "Mumbai",
+  //     "Cairo"
+  //   ];
+  //   $( "#tags" ).autocomplete({
+  //     source: availableTags
+  //   });
+  // } );
