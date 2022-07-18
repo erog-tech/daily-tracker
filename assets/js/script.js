@@ -7,7 +7,18 @@ function showDate() {
   $('#todayDate').html(dt.toLocaleString(DateTime.DATE_HUGE)); 
 }
 
-setInterval(showDate, 10000); // call for the current hour every second
+setInterval(showDate, 1000); // call for the current hour every second
+
+// Pull the background image into the header
+function myFunction() {
+  document.body.style.backgroundColor = "#f3f3f3";
+  document.body.style.backgroundImage = "url('img_tree.png')";
+}
+
+$(function() {
+    let imageUrl = 'https://apod.nasa.gov/apod/image/2207/Quintet_JwstHstEtcGendler_2413.jpg';
+    $("#headerArea").css("background-image", "url(" + imageUrl + ")");
+});
 
 // This is used for Calling NASA API
 const url = 'https://api.nasa.gov/planetary/apod?api_key='
@@ -24,7 +35,7 @@ const fetchNASAData = async () => {
     }
   }
   
-  const displayData = data => {
+  const displayData = function(data) {
     document.getElementById('title').textContent = data.title
     document.getElementById('date').textContent = data.date
     document.getElementById('picture').src = data.hdurl
