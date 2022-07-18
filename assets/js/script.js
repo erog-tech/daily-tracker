@@ -1,3 +1,14 @@
+// This calls Luxon API to keep current day and time 
+const DateTime = luxon.DateTime; // Call Luxon API for time
+const dt = DateTime.now(); // Set current date
+
+// show the current date in header
+function showDate() {
+  $('#todayDate').html(dt.toLocaleString(DateTime.DATE_HUGE)); 
+}
+
+setInterval(showDate, 10000); // call for the current hour every second
+
 // This is used for Calling NASA API
 const url = 'https://api.nasa.gov/planetary/apod?api_key='
 const api_key = config.NASA_API_KEY
