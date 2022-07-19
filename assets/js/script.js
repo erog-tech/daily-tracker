@@ -9,6 +9,19 @@ function showDate() {
 
 setInterval(showDate, 1000); // call for the current hour every second
 
+
+// Pull the background image into the header
+function myFunction() {
+  document.body.style.backgroundColor = "#f3f3f3";
+  document.body.style.backgroundImage = "url('img_tree.png')";
+}
+
+$(function() {
+    let imageUrl = 'https://apod.nasa.gov/apod/image/2207/Quintet_JwstHstEtcGendler_2413.jpg';
+    $("#headerArea").css("background-image", "url(" + imageUrl + ")");
+});
+
+
 // This is used for Calling NASA API
 const url = 'https://api.nasa.gov/planetary/apod?api_key='
 const api_key = config.NASA_API_KEY
@@ -24,9 +37,6 @@ const api_key = config.NASA_API_KEY
           document.getElementById('explanation').textContent = data.explanation
           console.log(data)
         });
-      
-       
-  
 
   // This is used for Calling Open Weather API
 const urlWeather = 'https://api.openweathermap.org/data/2.5/onecall?lat=52.52&lon=13.405&exclude=hourly,daily&units=metric&appid='
