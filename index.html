@@ -14,14 +14,15 @@
 
 <!-- foundation-rtl.min.css: Compressed CSS with right-to-left reading direction -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation-rtl.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"/>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> <!--jqueryUI  -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"/>
     <!-- Our own CSS stylesheet -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Daily Tracker</title>
 </head>
 <body>
 
-  /*<header>
+<!-- <header>
     <div>
       <h2 id="apodBoxTitle">About today's NASA picture</h2>
           <h3 id="title"></h3>
@@ -31,13 +32,14 @@
       <h1>Daily Tracker</h1>
       <h1 id="icon"><img class="wicon" src="" alt="Weather icon"></h1>
       <p id="todayDate"></p>
-      <div id="todayWeather">Today's weather</div>*/
+      <div id="todayWeather">Today's weather</div> -->
 
 
   <header id="headerArea" class="row">
     <div class="columns small-9">
         <h1>Daily Tracker</h1>
         <h3 id="todayDate"></h3>
+        <h1 id="icon"><img class="wicon" src="" alt="Weather icon"></h1>
     </div>
     <div class="columns small-3">
       <div id="todayWeather">Today's weather Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, recusandae. Debitis facere reprehenderit nesciunt illum quas? Natus dicta id vitae unde! Possimus commodi, inventore repellendus doloribus quasi suscipit illo molestiae.</div>
@@ -76,9 +78,10 @@
         <section id="cityWeather">
           <p>This section is where the city weather search and results will go</p>
 
-          <div >
-            <input id="tags" placeholder="Berlin">
-          </div>
+          <div>Search for a City:</div>
+                <div class="ui-widget">
+                    <input id="tags" placeholder="Berlin">
+                </div>
           <div>
             <h1 id="icon"><img class="wicon" src="" alt="Weather icon"></h1>
             <h2 id="city"></h2>
@@ -105,12 +108,13 @@
 
   </footer>
       <!-- External js  -->
+      <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+      <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/luxon@2.4.0/build/global/luxon.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js" crossorigin="anonymous"></script>
       <script src="https://kit.fontawesome.com/53330a4c0d.js" crossorigin="anonymous"></script>
       <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
       <script src="./assets/js/config.js"></script>
-
       <script src="./assets/js/script.js"></script>
 </body>
 </html>
