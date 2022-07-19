@@ -16,10 +16,10 @@ function myFunction() {
   document.body.style.backgroundImage = "url('img_tree.png')";
 }
 
-$(function() {
-    let imageUrl = 'https://apod.nasa.gov/apod/image/2207/Quintet_JwstHstEtcGendler_2413.jpg';
-    $("#headerArea").css("background-image", "url(" + imageUrl + ")");
-});
+// $(function() {
+//     let imageUrl = 'https://apod.nasa.gov/apod/image/2207/Quintet_JwstHstEtcGendler_2413.jpg';
+//     $("#headerArea").css("background-image", "url(" + imageUrl + ")");
+// });
 
 
 // This is used for Calling NASA API
@@ -31,9 +31,8 @@ const api_key = config.NASA_API_KEY
           return response.json();
         })
         .then(function (data) {
-          document.getElementById('title').textContent = data.title
-          document.getElementById('date').textContent = data.date
-          document.getElementById('picture').src = data.hdurl
+          let imageUrl = data.hdurl;
+          $("#headerArea").css("background-image", "url(" + imageUrl + ")");
           document.getElementById('explanation').textContent = data.explanation
           console.log(data)
         });
