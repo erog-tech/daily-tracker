@@ -52,8 +52,7 @@ const api_key = config.NASA_API_KEY
         })
         .then(function (data) {
           let imageUrl = data.hdurl;
-          $("#headerArea").css("background-image", "url(" + imageUrl+")");
-          
+          $("#headerArea").css("background-image", "url(" + imageUrl + ")");
           document.getElementById('explanation').textContent = data.explanation
           console.log(data)
         });
