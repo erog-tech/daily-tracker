@@ -11,16 +11,36 @@ setInterval(showDate, 1000); // call for the current hour every second
 
 
 // Pull the background image into the header
-function myFunction() {
-  document.body.style.backgroundColor = "#f3f3f3";
-  document.body.style.backgroundImage = "url('img_tree.png')";
-}
+// function myFunction() {
+//   document.body.style.backgroundColor = "#f3f3f3";
+//   document.body.style.backgroundImage = "url('img_tree.png')";
+// }
 
 // $(function() {
 //     let imageUrl = 'https://apod.nasa.gov/apod/image/2207/Quintet_JwstHstEtcGendler_2413.jpg';
 //     $("#headerArea").css("background-image", "url(" + imageUrl + ")");
 // });
 
+ // this saves the list of cities
+//  $( function() {
+//   var availableTags = [
+//     "Berlin",
+//     "New Delhi",
+//     "Chicago",
+//     "London",
+//     "Paris",
+//     "San Francisco",
+//     "New York",
+//     "Barcelona",
+//     "Madrid",
+//     "Athens",
+//     "Mumbai",
+//     "Cairo"
+//   ];
+//   $( "#tags" ).autocomplete({
+//     source: availableTags
+//   });
+// } );
 
 // This is used for Calling NASA API
 const url = 'https://api.nasa.gov/planetary/apod?api_key='
@@ -58,23 +78,4 @@ const api_key_2 = config.OPEN_WEATHER_API_KEY
         console.log(data)
       });
       
-  // this saves the list of cities
-  // $( function() {
-  //   var availableTags = [
-  //     "Berlin",
-  //     "New Delhi",
-  //     "Chicago",
-  //     "London",
-  //     "Paris",
-  //     "San Francisco",
-  //     "New York",
-  //     "Barcelona",
-  //     "Madrid",
-  //     "Athens",
-  //     "Mumbai",
-  //     "Cairo"
-  //   ];
-  //   $( "#tags" ).autocomplete({
-  //     source: availableTags
-  //   });
-  // } );
+ 
