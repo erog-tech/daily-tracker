@@ -54,7 +54,7 @@ const api_key_2 = config.OPEN_WEATHER_API_KEY
   //   var availableTags = [
   //     "Berlin",
   //     "New Delhi",
-  //     "Chcago",
+  //     "Chicago",
   //     "London",
   //     "Paris",
   //     "San Francisco",
