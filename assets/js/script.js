@@ -7,7 +7,7 @@ function showDate() {
   $('#todayDate').html(dt.toLocaleString(DateTime.DATE_HUGE)); 
 }
 
-setInterval(showDate, 10000); // call for the current hour every second
+setInterval(showDate, 1000); // call for the current hour every second
 
 // This is used for Calling NASA API
 const url = 'https://api.nasa.gov/planetary/apod?api_key='
@@ -41,7 +41,7 @@ const api_key_2 = config.OPEN_WEATHER_API_KEY
       })
       .then(function (data){
         let iconurl = "http://openweathermap.org/img/w/" + data.current.weather[0].icon + ".png"
-        $('#wicon').attr('src', iconurl);
+        $('.wicon').attr('src', iconurl);
         document.getElementById('city').textContent = 'City:' +' ' +  data.timezone
         document.getElementById('temp').textContent = data.current.temp + ' ' + ' °C'
         document.getElementById('date1').textContent = new Date(data.current.dt*1000).toLocaleDateString("en-GB", {day: "numeric", month:  "short", year: "numeric"});
