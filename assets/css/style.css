@@ -66,3 +66,22 @@ footer {
 background-color: var(--footer);
 height: 10vh;
 }
+
+.apod {
+  background-color: #9C9C53;
+  width: 300px;
+  border: 5px solid green;
+  padding: 5px;
+  margin: 2px;
+  margin-bottom: 50px;
+}
+.ui-widget {
+  background-color: #9C9C53;
+  width: 300px;
+  border: 5px solid green;
+  padding: 5px;
+  margin: 2px;
+}
+.table-section {
+    margin-top: 50px;
+}
