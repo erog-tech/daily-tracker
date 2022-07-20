@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Compressed Foundation Framework CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" crossorigin="anonymous">
-    <!-- foundation-float.min.css: Compressed CSS with legacy Float Grid -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation-float.min.css" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compressed Foundation Framework CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css"
+    crossorigin="anonymous">
+  <!-- foundation-float.min.css: Compressed CSS with legacy Float Grid -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation-float.min.css"
+    crossorigin="anonymous">
 
-<!-- foundation-prototype.min.css: Compressed CSS with prototyping classes -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation-prototype.min.css" crossorigin="anonymous">
+  <!-- foundation-prototype.min.css: Compressed CSS with prototyping classes -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation-prototype.min.css"
+    crossorigin="anonymous">
 
-<!-- foundation-rtl.min.css: Compressed CSS with right-to-left reading direction -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation-rtl.min.css" crossorigin="anonymous">
-<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> <!--jqueryUI  -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"/>
-    <!-- Our own CSS stylesheet -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Daily Tracker</title>
+  <!-- foundation-rtl.min.css: Compressed CSS with right-to-left reading direction -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation-rtl.min.css"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <!--jqueryUI  -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" />
+  <!-- Our own CSS stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Daily Tracker</title>
 </head>
+
 <body>
 
- <!-- <header>
+  <!-- <header>
     <div>
       <h2 id="apodBoxTitle">About today's NASA picture</h2>
           <h3 id="title"></h3>
@@ -35,86 +43,239 @@
       <div id="todayWeather">Today's weather</div> -->
 
 
-  <header id="headerArea" class="row">
-    <div class="columns small-9">
+  <header id="headerArea">
+    <div class="row align-justify">
+      <div class="small-4 columns">
         <h1>Daily Tracker</h1>
         <h3 id="todayDate"></h3>
-        <h1 id="icon"><img class="wicon" src="" alt="Weather icon"></h1>
-    </div>
-    <div class="columns small-3">
-      <div id="todayWeather">Today's weather Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, recusandae. Debitis facere reprehenderit nesciunt illum quas? Natus dicta id vitae unde! Possimus commodi, inventore repellendus doloribus quasi suscipit illo molestiae.</div>
-
+      </div>
+      <div class="columns small-4">
+        <div id="todayWeather">
+          <h1 id="icon"><img class="wicon" src="" alt="Weather icon"></h1>
+          <h3 class="city"></h3>
+          <h3 class="temp"></h3>
+        </div>
+      </div>
     </div>
   </header>
 
-  <main id="main-container" class="row">
-    <p>This is the main container. It will hold the task table, the weather search section, and the APOD info</p>
-    <section id="taskTable">
-      <p>This section is where the task table will go</p>
-      
-      <div class="row">
-        <div class="columns small-1 ">08:00 
-        </div>
-        <div class="columns small-8 ">
-          <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
-        </div>
-        <div class="columns small-1 ">
-          <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl fa-beat"></i></button>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="columns small-1 ">09:00 
-        </div>
-        <div class="columns small-8 ">
-          <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
-        </div>
-        <div class="columns small-1 ">
-          <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl fa-beat"></i></button>
-        </div>
-      </div>
-
-    </section>
-        <section id="cityWeather">
-          <p>This section is where the city weather search and results will go</p>
-
-          <div>Search for a City:</div>
-                <div class="ui-widget">
-                    <input id="tags" placeholder="Berlin">
-                </div>
-          <div>
-            <h1 id="icon"><img class="wicon" src="" alt="Weather icon"></h1>
-            <h2 id="city"></h2>
-            <h2 id="temp"></h2>
-            <h2 id="date1"></h2>
-            <h2 id="time"></h2>
+  <main>
+    <!-- This is for the whole section  -->
+    <div class="row table-section">
+      <div class="columns small-10">
+        <!-- this is for the table -->
+        <div class="row">
+          <div class="columns small-6 large-1 ">08:00
           </div>
-          
-        </section>
-    
-        <section id="apodImageInfo" class="picture-explanation-container">
-          <p>This section is where the APOD will go</p>
-          
-          <p id="explanation"></p>
-        </section>
-       
-      </main>
-      
-      
-    
- 
+          <div class="columns small-6 large-8 ">
+            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
+          </div>
+          <div class="columns small-12 large-3 ">
+            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl fa-beat"></i></button>
+          </div>
+        </div>
 
-  <footer class="row">
+        <div class="row">
+          <div class="columns small-6 large-1 ">09:00
+          </div>
+          <div class="columns small-6 large-8 ">
+            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
+          </div>
+          <div class="columns small-12 large-3 ">
+            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl fa-beat"></i></button>
+          </div>
+        </div>
 
+        <div class="row">
+          <div class="columns small-6 large-1 ">10:00
+          </div>
+          <div class="columns small-6 large-8 ">
+            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
+          </div>
+          <div class="columns small-12 large-3 ">
+            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl fa-beat"></i></button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="columns small-6 large-1 ">11:00
+          </div>
+          <div class="columns small-6 large-8 ">
+            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
+          </div>
+          <div class="columns small-12 large-3 ">
+            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl fa-beat"></i></button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="columns small-6 large-1 ">12:00
+          </div>
+          <div class="columns small-6 large-8 ">
+            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
+          </div>
+          <div class="columns small-12 large-3 ">
+            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl fa-beat"></i></button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="columns small-6 large-1 ">13:00
+          </div>
+          <div class="columns small-6 large-8 ">
+            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
+          </div>
+          <div class="columns small-12 large-3 ">
+            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl fa-beat"></i></button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="columns small-6 large-1 ">14:00
+          </div>
+          <div class="columns small-6 large-8 ">
+            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
+          </div>
+          <div class="columns small-12 large-3 ">
+            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl fa-beat"></i></button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="columns small-6 large-1 ">15:00
+          </div>
+          <div class="columns small-6 large-8 ">
+            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
+          </div>
+          <div class="columns small-12 large-3 ">
+            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl fa-beat"></i></button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="columns small-6 large-1 ">16:00
+          </div>
+          <div class="columns small-6 large-8 ">
+            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
+          </div>
+          <div class="columns small-12 large-3 ">
+            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl fa-beat"></i></button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="columns small-6 large-1 ">17:00
+          </div>
+          <div class="columns small-6 large-8 ">
+            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
+          </div>
+          <div class="columns small-12 large-3 ">
+            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl fa-beat"></i></button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="columns small-6 large-1 ">18:00
+          </div>
+          <div class="columns small-6 large-8 ">
+            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
+          </div>
+          <div class="columns small-12 large-3 ">
+            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl fa-beat"></i></button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="columns small-6 large-1 ">19:00
+          </div>
+          <div class="columns small-6 large-8 ">
+            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
+          </div>
+          <div class="columns small-12 large-3 ">
+            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl fa-beat"></i></button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="columns small-6 large-1 ">20:00
+          </div>
+          <div class="columns small-6 large-8 ">
+            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
+          </div>
+          <div class="columns small-12 large-3 ">
+            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl fa-beat"></i></button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="columns small-6 large-1 ">21:00
+          </div>
+          <div class="columns small-6 large-8 ">
+            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
+          </div>
+          <div class="columns small-12 large-3 ">
+            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl fa-beat"></i></button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="columns small-6 large-1 ">22:00
+          </div>
+          <div class="columns small-6 large-8 ">
+            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
+          </div>
+          <div class="columns small-12 large-3 ">
+            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl fa-beat"></i></button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="columns small-6 large-1 ">23:00
+          </div>
+          <div class="columns small-6 large-8 ">
+            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
+          </div>
+          <div class="columns small-12 large-3 ">
+            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl fa-beat"></i></button>
+          </div>
+        </div>
+
+        
+      </div>
+
+<!-- This is for the city weather -->
+      <div class="columns small-2">
+            <div class="ui-widget">
+              <input id="tags" placeholder="Search City">
+              <h1 id="icon"><img class="wicon" src="" alt="Weather icon"></h1>
+              <p class="city"></p>
+              <p class="temp"></p>
+              <p id="date1"></p>
+              <p id="time"></p>
+            </div>
+          <!-- This is for the APOD explanation -->
+            <div class="apod ">
+              <h3>About the image</h3>
+              <p id="explanation"></p>
+            </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+footer
   </footer>
-      <!-- External js  -->
-      <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-      <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/luxon@2.4.0/build/global/luxon.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js" crossorigin="anonymous"></script>
-      <script src="https://kit.fontawesome.com/53330a4c0d.js" crossorigin="anonymous"></script>
-      <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-      <script src="./assets/js/config.js"></script>
-      <script src="./assets/js/script.js"></script>
+  <!-- External js  -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/luxon@2.4.0/build/global/luxon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/53330a4c0d.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+    integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+  <script src="./assets/js/config.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

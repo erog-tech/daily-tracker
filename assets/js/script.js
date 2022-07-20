@@ -71,8 +71,8 @@ const api_key_2 = config.OPEN_WEATHER_API_KEY
       .then(function (data){
         let iconurl = "http://openweathermap.org/img/w/" + data.current.weather[0].icon + ".png"
         $('.wicon').attr('src', iconurl);
-        document.getElementById('city').textContent = 'City:' +' ' +  data.timezone
-        document.getElementById('temp').textContent = data.current.temp + ' ' + ' °C'
+        document.querySelector('.city').textContent = data.timezone
+        document.querySelector('.temp').textContent = data.current.temp + ' ' + ' °C'
         document.getElementById('date1').textContent = new Date(data.current.dt*1000).toLocaleDateString("en-GB", {day: "numeric", month:  "short", year: "numeric"});
         document.getElementById('time').textContent = new Date(data.current.dt*1000).toLocaleDateString("en-GB", {weekday: "short", hour: "numeric", minute: "numeric"});
         console.log(data)
