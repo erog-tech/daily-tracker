@@ -51,9 +51,13 @@ const api_key = config.NASA_API_KEY
           return response.json();
         })
         .then(function (data) {
+
+          // This is used for showing the Nasa image
           let imageUrl = data.hdurl;
           $("#headerArea").css("background-image", "url(" + imageUrl + ")");
-          document.getElementById('explanation').textContent = data.explanation
+          
+          // This is used for showing the text of about image
+          $('#explanation').text(data.explanation);
           console.log(data)
         });
 
@@ -69,12 +73,33 @@ const api_key_2 = config.OPEN_WEATHER_API_KEY
       
       })
       .then(function (data){
+        // this used to display icon
         let iconurl = "http://openweathermap.org/img/w/" + data.current.weather[0].icon + ".png"
         $('.wicon').attr('src', iconurl);
-        document.querySelector('.city').textContent = data.timezone
-        document.querySelector('.temp').textContent = data.current.temp + ' ' + ' °C'
-        document.getElementById('date1').textContent = new Date(data.current.dt*1000).toLocaleDateString("en-GB", {day: "numeric", month:  "short", year: "numeric"});
-        document.getElementById('time').textContent = new Date(data.current.dt*1000).toLocaleDateString("en-GB", {weekday: "short", hour: "numeric", minute: "numeric"});
+
+        // this is used to display city
+        $('.city').each(function() {
+          $('.city').text(data.timezone);
+        });
+        
+        // this is used to display temperature
+        $('.temp').each(function() {
+          let temp = data.current.temp + ' ' + '°C'
+          $('.temp').text(temp)
+        });
+
+        // this is used to display date
+        $('.date').each(function() {
+          let date = new Date(data.current.dt*1000).toLocaleDateString("en-GB", {day: "numeric", month:  "short", year: "numeric"});
+          $('.date').text(date)
+        });
+
+        // this is used to display time
+        $('.time').each(function() {
+          let time = new Date(data.current.dt*1000).toLocaleDateString("en-GB", {weekday: "short", hour: "numeric", minute: "numeric"});
+          $('.time').text(time)
+        });
+        
         console.log(data)
       });
       
