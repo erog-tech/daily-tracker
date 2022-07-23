@@ -112,8 +112,7 @@ footer {
     outline: inherit;
   }
 
-  i {
-    --fa-animation-duration: 2s;
-  }
-
+.fa-floppy-disk {
+    color: var(--dusk-blue)
+}
 /* Style the textarea for div color, increase font size and weight */
