@@ -1,15 +1,15 @@
 :root {
-    --header: #f0f8ff;
-    --main: #ffe4c4;
+    --clear-blue: #cfedfd;
+    --sky-blue: #bfe6fb;
     --tasks: #9CAF88;
-    --weather: #9C9C53;
-    --apod: #A4BDBA;
-    --footer: #f0a8fa;
+    --dusk-blue: #81b1c9;
+    --horizon-blue: #55859f;
+    --night-blue: #115376;
 }
 
 
 header {
-    background-color: var(--header);
+    background-color: var(--clear-blue);
     width: 100vw;
     padding: 20px 0px 20px 0px;
     background-image: "";
@@ -18,32 +18,32 @@ header {
 }
 
 h1 {
-    border: 1px solid black;
+    border: 1px solid var(--sky-blue);
     width: fit-content;
     margin-left: 20px;
     margin-top: 20px;
     padding: 10px;
-    background-color: var(--header)
+    background-color: var(--clear-blue)
 }
 
 #todayDate {
-    border: 4px solid black;
+    border: 4px solid var(--sky-blue);
     width: fit-content;
     margin-left: 20px;
     padding: 10px;
-    background-color: var(--header);
+    background-color: var(--clear-blue);
 }
 
 #todayWeather {
-    border: 4px solid black;
+    border: 4px solid var(--sky-blue);
     width: fit-content;
     margin-left: 20px;
     padding: 10px;
-    background-color: var(--header);
+    background-color: var(--clear-blue);
 }
 
 #main-container {
-    background-color: var(--main);
+    background-color: var(-blue);
     padding-bottom: 20px;
 
 }
@@ -66,23 +66,33 @@ h1 {
 }
 
 footer {
-    background-color: var(--footer);
+    color: var(--sky-blue);
+    background-color: var(--night-blue);
     height: 10vh;
 }
 
 .apod {
-    background-color: #9C9C53;
+    background-color: var(--clear-blue);
     width: 300px;
-    border: 5px solid green;
-    padding: 5px;
+    border: 2px solid var(--sky-blue);
+    padding: 10px;
     margin: 2px;
     margin-bottom: 50px;
 }
 
+.apod h3 {
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+    background-color: var(--night-blue);
+    color: var(--sky-blue);
+    text-align: center;
+}
+
 .ui-widget {
-    background-color: #9C9C53;
+    background-color: var(--clear-blue);
     width: 300px;
-    border: 5px solid green;
+    border: 2px solid var(--sky-blue);
     padding: 5px;
     margin: 2px;
 }
@@ -106,7 +116,4 @@ footer {
     --fa-animation-duration: 2s;
   }
 
-
-
 /* Style the textarea for div color, increase font size and weight */
- 
