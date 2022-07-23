@@ -78,7 +78,7 @@ fetch(`${urlWeather}${api_key_2}`)
 
     // this is used to display time
     $('.time').each(function () {
-      let time = new Date(data.current.dt * 1000).toLocaleDateString("en-GB", { weekday: "short", hour: "numeric", minute: "numeric" });
+      let time = moment().format('LTS');
       $('.time').text(time)
     });
 
