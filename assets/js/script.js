@@ -41,33 +41,33 @@ fetch(`${url}${api_key}`)
     console.log(data)
   });
 
+let urlWeather = ""
+
 // This is used for Calling Open Weather API
-const urlWeather = 'https://api.openweathermap.org/data/2.5/onecall?lat=52.52&lon=13.405&exclude=hourly,daily&units=metric&appid='
-const api_key_2 = config.OPEN_WEATHER_API_KEY
+function changeCity(urlWeather= 'https://api.openweathermap.org/data/2.5/onecall?lat=52.5244&lon=13.4105&exclude=hourly,daily&units=metric&appid=') {
 
-
-fetch(`${urlWeather}${api_key_2}`)
-  .then(function (response) {
-    return response.json();
-
-
-  })
-  .then(function (data) {
-    // this used to display icon
-    let iconurl = "http://openweathermap.org/img/w/" + data.current.weather[0].icon + ".png"
-    $('.wicon').attr('src', iconurl);
-
-    // this is used to display city
-    $('.city').each(function () {
-      $('.city').text(data.timezone);
-    });
-
-    // this is used to display temperature
-    $('.temp').each(function () {
-      let temp = Math.round(data.current.temp) + ' ' + '°C'
-      $('.temp').text(temp)
-    });
-
+  const api_key_2 = config.OPEN_WEATHER_API_KEY
+  
+  fetch(`${urlWeather}${api_key_2}`)
+    .then(function (response) {
+      return response.json();
+      })
+    .then(function (data) {
+      // this used to display icon
+      let iconurl = "http://openweathermap.org/img/w/" + data.current.weather[0].icon + ".png"
+      $('.wicon').attr('src', iconurl);
+  
+      // this is used to display city
+      $('.city').each(function () {
+        $('.city').text(data.timezone);
+      });
+  
+      // this is used to display temperature
+      $('.temp').each(function () {
+        let temp = Math.round(data.current.temp) + ' ' + '°C'
+        $('.temp').text(temp)
+      });
+  
     // this is used to display date
     $('.date').each(function () {
       $('.date').text(date) // using Luxon const date
@@ -77,9 +77,34 @@ fetch(`${urlWeather}${api_key_2}`)
     $('.time').each(function () {
       $('.time').text(time) // using Luxon const time
     });
+  
+      console.log(data)
 
-    console.log(data)
-  });
+// Change the city on select
+$('#myselect').on('change', function (e) {
+  e.preventDefault()
+  var optionSelected = $("option:selected", this);
+  var valueSelected = this.value;
+  
+  if (valueSelected == '1') {
+    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=52.5244&lon=13.4105&exclude=hourly,daily&units=metric&appid=');
+  }
+  else if (valueSelected == '2') {
+    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=28.66&lon=77.21&exclude=hourly,daily&units=metric&appid=');
+  }
+  else if (valueSelected == '3') {
+    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=41.85&lon=-87.65&exclude=hourly,daily&units=metric&appid=');
+  }
+  else if (valueSelected == '4') {
+    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=51.5085&lon=-0.1257&exclude=hourly,daily&units=metric&appid=');
+  }
+  else if (valueSelected == '5') {
+    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=48.8534&lon=2.3488&exclude=hourly,daily&units=metric&appid=');
+  }
+  else{
+    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=52.5244&lon=13.4105&exclude=hourly,daily&units=metric&appid=')
+  }
+ } );
 
 //* Use .on as event listener for submit type
 $("form").on("submit", function (e) {
@@ -99,23 +124,3 @@ $("document").ready(function (e) {
     element.value = value;
   });
 });
-
-$( function() {
-  var availableTags = [
-    "Berlin",
-    "New Delhi",
-    "Chicago",
-    "London",
-    "Paris",
-    "San Francisco",
-    "New York",
-    "Barcelona",
-    "Madrid",
-    "Athens",
-    "Mumbai",
-    "Cairo"
-  ];
-  $( "#tags" ).autocomplete({
-    source: availableTags
-  });
-} );
