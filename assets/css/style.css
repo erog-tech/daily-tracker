@@ -116,3 +116,23 @@ footer {
     color: var(--dusk-blue)
 }
 /* Style the textarea for div color, increase font size and weight */
+
+/* Style weather icon */
+.wicon {
+    display: flex;
+    justify-content: center;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/* Style weather header */
+.ui-widget h2 {
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+    background-color: var(--night-blue);
+    color: var(--sky-blue);
+    text-align: center;
+}
