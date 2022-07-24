@@ -44,7 +44,7 @@ fetch(`${url}${api_key}`)
 let urlWeather = ""
 
 // This is used for Calling Open Weather API
-function changeCity(urlWeather = 'https://api.openweathermap.org/data/2.5/onecall?lat=52.5244&lon=13.4105&exclude=hourly,daily&units=metric&appid=') {
+function changeCity(urlWeather = 'https://api.openweathermap.org/data/2.5/onecall?lat=52.5244&lon=13.4105&units=metric&appid=') {
   const api_key_2 = config.OPEN_WEATHER_API_KEY
   let combineUrl = `${urlWeather}${api_key_2}`
   
@@ -91,6 +91,41 @@ function display() {
     $('.time').each(function () {
       $('.time').text(time) // using Luxon const time
     });
+
+    let iconurl1 = "http://openweathermap.org/img/w/" + data.hourly[8].weather[0].icon + ".png"
+      $('.wicon8').attr('src', iconurl1);
+
+    let iconurl2 = "http://openweathermap.org/img/w/" + data.hourly[9].weather[0].icon + ".png"
+      $('.wicon9').attr('src', iconurl2);
+
+    let iconurl3 = "http://openweathermap.org/img/w/" + data.hourly[10].weather[0].icon + ".png"
+      $('.wicon10').attr('src', iconurl3);
+
+    let iconurl4 = "http://openweathermap.org/img/w/" + data.hourly[11].weather[0].icon + ".png"
+      $('.wicon11').attr('src', iconurl4);
+
+    let iconurl5 = "http://openweathermap.org/img/w/" + data.hourly[12].weather[0].icon + ".png"
+      $('.wicon12').attr('src', iconurl5);
+      
+    let iconurl6 = "http://openweathermap.org/img/w/" + data.hourly[13].weather[0].icon + ".png"
+      $('.wicon13').attr('src', iconurl6);
+
+    let iconurl7 = "http://openweathermap.org/img/w/" + data.hourly[14].weather[0].icon + ".png"
+      $('.wicon14').attr('src', iconurl7);
+
+    let iconurl8 = "http://openweathermap.org/img/w/" + data.hourly[15].weather[0].icon + ".png"
+      $('.wicon15').attr('src', iconurl8);
+
+    let iconurl9 = "http://openweathermap.org/img/w/" + data.hourly[16].weather[0].icon + ".png"
+      $('.wicon16').attr('src', iconurl9);
+
+    let iconurl10 = "http://openweathermap.org/img/w/" + data.hourly[17].weather[0].icon + ".png"
+      $('.wicon17').attr('src', iconurl10);
+
+    let iconurl11 = "http://openweathermap.org/img/w/" + data.hourly[18].weather[0].icon + ".png"
+      $('.wicon18').attr('src', iconurl11);
+
+    console.log(data)
   });
 }  
 } 
@@ -102,22 +137,22 @@ $('#myselect').on('change', function (e) {
   var valueSelected = this.value;
   
   if (valueSelected == '1') {
-    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=52.5244&lon=13.4105&exclude=hourly,daily&units=metric&appid=');
+    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=52.5244&lon=13.4105&units=metric&appid=');
   }
   else if (valueSelected == '2') {
-    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=28.66&lon=77.21&exclude=hourly,daily&units=metric&appid=');
+    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=28.66&lon=77.21&units=metric&appid=');
   }
   else if (valueSelected == '3') {
-    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=41.85&lon=-87.65&exclude=hourly,daily&units=metric&appid=');
+    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=41.85&lon=-87.65&units=metric&appid=');
   }
   else if (valueSelected == '4') {
-    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=51.5085&lon=-0.1257&exclude=hourly,daily&units=metric&appid=');
+    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=51.5085&lon=-0.1257&units=metric&appid=');
   }
   else if (valueSelected == '5') {
-    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=48.8534&lon=2.3488&exclude=hourly,daily&units=metric&appid=');
+    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=48.8534&lon=2.3488&units=metric&appid=');
   }
   else{
-    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=52.5244&lon=13.4105&exclude=hourly,daily&units=metric&appid=')
+    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=52.5244&lon=13.4105&units=metric&appid=')
   }
  });
  changeCity()
