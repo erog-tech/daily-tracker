@@ -17,17 +17,6 @@ function highlightCurrentHour() {
 setInterval(showDate, 1000); // call for the current hour every second
 
 
-// Pull the background image into the header
-// function myFunction() {
-//   document.body.style.backgroundColor = "#f3f3f3";
-//   document.body.style.backgroundImage = "url('img_tree.png')";
-// }
-
-// $(function() {
-//     let imageUrl = 'https://apod.nasa.gov/apod/image/2207/Quintet_JwstHstEtcGendler_2413.jpg';
-//     $("#headerArea").css("background-image", "url(" + imageUrl + ")");
-// });
-
 // this saves the list of cities
 
 
@@ -104,6 +93,7 @@ $("form").on("submit", function (e) {
 
 //* Use localStorage to show values on page
 $("document").ready(function (e) {
+  highlightCurrentHour(); // invoke immediately so there is no visual delay 
   $("textarea").each(function (indexInArray, element) {
     let value = localStorage.getItem(element.id);
     element.value = value;
