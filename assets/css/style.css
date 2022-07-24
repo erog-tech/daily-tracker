@@ -193,6 +193,38 @@ footer {
     height:auto; /* adjust height to content on all screens */
 }
 
-footer a {
-    color: var(--cloud-gray);
+
+/* Remove Bootstrap styles to use FontAwesome icon and animate it */
+.btn, button, input[type="submit"], input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
+
+.fa-floppy-disk {
+    color: var(--dusk-blue)
 }
+/* Style the textarea for div color, increase font size and weight */
+
+/* Style weather icon */
+.wicon {
+    display: flex;
+    justify-content: center;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/* Style weather header */
+.ui-widget h2 {
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+    background-color: var(--night-blue);
+    color: var(--sky-blue);
+    text-align: center;

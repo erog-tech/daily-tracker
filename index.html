@@ -36,7 +36,7 @@
       </div>
       <div class="columns small-12 large-3">
         <div id="todayWeather">
-          <h1 id="icon"><img class="wicon" src="" alt="Weather icon"></h1>
+          <div id="icon"><img class="wicon" src="" alt="Weather icon"></div>
           <h3 class="city"></h3>
           <h4 class="temp"></h4>
         </div>
@@ -188,18 +188,25 @@
     </form>
   </div>
 
-<!-- City weather and APOD section -->
-  <div class="columns small-12 large-4">
-      <div class="ui-widget">
-        <label for="tags"></label>
-        <input id="tags" placeholder="Search City">
+      <!-- This is for the city weather -->
+      <div class="columns small-2">
+        <div class="ui-widget">
+          <h2>Global weather</h2>
+          <label for="tags"></label>
+          <input id="tags" placeholder="Search for city weather">
 
-        <h1 id="icon"><img class="wicon" src="" alt="Weather icon"></h1>
-        <h4 class="city"></h4>
-        <h4 class="temp"></h4>
-        <h4 class="date"></h4>
-        <h4 class="time"></h4>
-      </div>
+          <div><img class="wicon" src="" alt="weather icon"></div>
+          <h3 class="city"></h3>
+          <h4 class="temp"></h4>
+          <h4 class="date"></h4>
+          <h4 class="time"></h4>
+        </div>
+        <!-- This is for the APOD explanation -->
+        <div class="apod ">
+          <h3>About the image</h3>
+          <h6 id="explanation"></h6>
+        </div>
+        
 <!-- About the APOD section -->
     <div class="apod">
       <h3>About the image</h3>
