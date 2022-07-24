@@ -34,7 +34,9 @@ fetch(`${url}${api_key}`)
 
     // This is used for showing the Nasa image
     let imageUrl = data.hdurl;
-    $("#headerArea").css("background-image", "url(" + imageUrl + ")");
+    $(".headerArea").css("background-image", "url(" + imageUrl + ")");
+    $('.headerArea').css('background-attachment','fixed');
+    $('.imageurl').attr('href', imageUrl);
 
     // This is used for showing the text of about image
     $('#explanation').text(data.explanation);
