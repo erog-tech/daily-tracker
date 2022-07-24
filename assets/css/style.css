@@ -68,6 +68,7 @@ main {
 
 .cell {
     max-height: 3rem;
+    margin-right: -50px;
 }
 
 /* Style text input area  */
