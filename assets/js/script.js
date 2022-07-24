@@ -1,20 +1,22 @@
 // This calls Luxon API to keep current day and time 
-const DateTime = luxon.DateTime; // Call Luxon API for time
-const dt = DateTime.now(); // Set current date
+const DateTime = luxon.DateTime; // Call Luxon API 
+const dt = DateTime.now(); // Call for current date
+const time = dt.toLocaleString(DateTime.TIME_SIMPLE); //=> '11:32 AM'
+const date = dt.toLocaleString(DateTime.DATE_HUGE); //=> 'Sunday, 24 July 2022'
 
 // show the current date in header
 function showDate() {
-  $('#todayDate').html(dt.toLocaleString(DateTime.DATE_HUGE));
+  $('#todayDate').html(date);
 }
 
 // Use "now-" and currentHour value as a class for the body element to use css selectors for color
 function highlightCurrentHour() {
-  let currentHour = DateTime.local().hour; // set the current hour
-  $("#current-day").html(dt.toLocaleString(DateTime.DATE_HUGE)); // show the current date
+  let currentHour = DateTime.local().hour; // call Luxon for current hour
+  $('#todayDate').html(date); // call Luxon for date and place in header
   $("body").addClass(`now-${currentHour}`); 
    }
 
-setInterval(showDate, 1000); // call for the current hour every second
+setInterval(highlightCurrentHour, 1000); // call for the current hour every second
 
 
 // this saves the list of cities
@@ -68,14 +70,12 @@ fetch(`${urlWeather}${api_key_2}`)
 
     // this is used to display date
     $('.date').each(function () {
-      let date = new Date(data.current.dt * 1000).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
-      $('.date').text(date)
+      $('.date').text(date) // using Luxon const date
     });
 
     // this is used to display time
     $('.time').each(function () {
-      let time = moment().format('LTS');
-      $('.time').text(time)
+      $('.time').text(time) // using Luxon const time
     });
 
     console.log(data)
