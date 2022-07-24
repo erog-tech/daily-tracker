@@ -1,13 +1,15 @@
+/* Set astronomy color palette */
 :root {
     --clear-blue: #cfedfd;
     --sky-blue: #bfe6fb;
-    --tasks: #9CAF88;
+    --cloud-gray: whitesmoke;
     --dusk-blue: #81b1c9;
     --horizon-blue: #55859f;
     --night-blue: #115376;
+    --pitch-black: #000000; 
 }
 
-
+/* Style header elements, incl. background image  */
 header {
     background-color: var(--clear-blue);
     width: 100vw;
@@ -42,77 +44,155 @@ h1 {
     background-color: var(--clear-blue);
 }
 
-#main-container {
-    background-color: var(-blue);
+/* Style main container and its content */
+
+main {
+    margin-top: 50px;
     padding-bottom: 20px;
+    width: 100vw;
 
 }
 
-#taskTable {
-    background-color: var(--tasks);
-    height: 20vh;
-    margin: 20px;
+/* Start table styling */
+
+/* Style text input area  */
+textarea {
+    background: transparent;
+    border: none;
+    resize: none;
+    color: var(--pitch-black);
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 5px;
+    /* white-space: pre-wrap;
+    height: 1rem; */
+  }
+
+/* Show past, current, and future hours */
+.nth2 {
+    background-color: var(--cloud-gray);
+  }
+
+.now-8 #hr-8, 
+.now-9 #hr-9, 
+.now-10 #hr-10, 
+.now-11 #hr-11,
+.now-12 #hr-12,    
+.now-13 #hr-13,
+.now-14 #hr-14, 
+.now-15 #hr-15, 
+.now-16 #hr-16, 
+.now-17 #hr-17, 
+.now-18 #hr-18 {
+  background-color: var(--sky-blue);
 }
 
-#cityWeather {
-    background-color: var(--weather);
-    height: 20vh;
-    margin: 20px;
+.now-8 #hr-9,
+.now-8 #hr-10,
+.now-8 #hr-11,
+.now-8 #hr-12,
+.now-8 #hr-13,
+.now-8 #hr-14,
+.now-8 #hr-15,
+.now-8 #hr-16,  
+.now-8 #hr-17,
+.now-8 #hr-18,  
+.now-9 #hr-10,
+.now-9 #hr-11,
+.now-9 #hr-12,
+.now-9 #hr-13,
+.now-9 #hr-14,
+.now-9 #hr-15,
+.now-9 #hr-16,  
+.now-9 #hr-17,
+.now-9 #hr-18,  
+.now-10 #hr-11,
+.now-10 #hr-12,
+.now-10 #hr-13,
+.now-10 #hr-14,
+.now-10 #hr-15,
+.now-10 #hr-16,  
+.now-10 #hr-17,
+.now-10 #hr-18,
+.now-11 #hr-12,
+.now-11 #hr-13,
+.now-11 #hr-14,
+.now-11 #hr-15,
+.now-11 #hr-16,  
+.now-11 #hr-17,
+.now-11 #hr-18,
+.now-12 #hr-13,
+.now-12 #hr-14,
+.now-12 #hr-15,
+.now-12 #hr-16,  
+.now-12 #hr-17,
+.now-12 #hr-18,
+.now-13 #hr-14,
+.now-13 #hr-15,
+.now-13 #hr-16,  
+.now-13 #hr-17,
+.now-13 #hr-18,
+.now-14 #hr-15,
+.now-14 #hr-16,  
+.now-14 #hr-17,
+.now-14 #hr-18,
+.now-15 #hr-16,  
+.now-15 #hr-17,
+.now-15 #hr-18,
+.now-16 #hr-17,
+.now-16 #hr-18,
+.now-17 #hr-18
+{
+  background-color: var(--horizon-blue);
 }
 
-#apodImageInfo {
-    background-color: var(--apod);
-    margin: 20px;
-}
+/* Style FontAwesome icon color and mouseover */
+.btn, button, input[type="submit"], input[type="reset"] {
+    background: none;
+    padding: 5px;
+    font: inherit;
+    cursor: pointer;
+    color: var(--dusk-blue);
+  }
 
-footer {
-    color: var(--sky-blue);
-    background-color: var(--night-blue);
-    height: 10vh;
-}
+/* End table styling */
 
-.apod {
+
+/* Style "City Weather" box */
+
+.ui-widget {
     background-color: var(--clear-blue);
-    width: 300px;
     border: 2px solid var(--sky-blue);
     padding: 10px;
-    margin: 2px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+/* Style "About APOD" box */
+.apod {
+    background-color: var(--clear-blue);
+    border: 2px solid var(--sky-blue);
+    padding: 10px;
+    margin-bottom: 20px;
 }
 
 .apod h3 {
-    width: 100%;
-    margin: 0px 0px 10px 0px;
+    /* width: 100%; */
+    margin: -10px -10px 10px -10px;
     padding: 0px;
     background-color: var(--night-blue);
     color: var(--sky-blue);
     text-align: center;
 }
 
-.ui-widget {
-    background-color: var(--clear-blue);
-    width: 300px;
-    border: 2px solid var(--sky-blue);
-    padding: 5px;
-    margin: 2px;
+  /* Style footer and text */
+footer {
+    padding-top: 5px;
+    color: var(--sky-blue);
+    background-color: var(--night-blue);
+    bottom:0;
+    height:auto; /* adjust height to content on all screens */
 }
 
-.table-section {
-    margin-top: 50px;
+footer a {
+    color: var(--cloud-gray);
 }
-
-/* Remove Bootstrap styles to use FontAwesome icon and animate it */
-.btn, button, input[type="submit"], input[type="reset"] {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-  }
-
-.fa-floppy-disk {
-    color: var(--dusk-blue)
-}
-/* Style the textarea for div color, increase font size and weight */
