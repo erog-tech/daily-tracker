@@ -44,10 +44,24 @@ fetch(`${url}${api_key}`)
 let urlWeather = ""
 
 // This is used for Calling Open Weather API
-function changeCity(urlWeather= 'https://api.openweathermap.org/data/2.5/onecall?lat=52.5244&lon=13.4105&exclude=hourly,daily&units=metric&appid=') {
-
+function changeCity(urlWeather = 'https://api.openweathermap.org/data/2.5/onecall?lat=52.5244&lon=13.4105&exclude=hourly,daily&units=metric&appid=') {
   const api_key_2 = config.OPEN_WEATHER_API_KEY
+  let combineUrl = `${urlWeather}${api_key_2}`
   
+  // this is used to display current location of the city
+  if (window.navigator && window.navigator.geolocation) {
+    window.navigator.geolocation.getCurrentPosition(function(position) {
+        $.getJSON(combineUrl, {
+            lat: position.coords.latitude,
+            lon: position.coords.longitude,
+            units: 'metric',
+            appid: 'APIKEY'
+        }).done(display())
+    })
+}
+
+function display() {
+
   fetch(`${urlWeather}${api_key_2}`)
     .then(function (response) {
       return response.json();
@@ -77,8 +91,9 @@ function changeCity(urlWeather= 'https://api.openweathermap.org/data/2.5/onecall
     $('.time').each(function () {
       $('.time').text(time) // using Luxon const time
     });
-  
-      console.log(data)
+  });
+}  
+} 
 
 // Change the city on select
 $('#myselect').on('change', function (e) {
@@ -104,7 +119,8 @@ $('#myselect').on('change', function (e) {
   else{
     changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=52.5244&lon=13.4105&exclude=hourly,daily&units=metric&appid=')
   }
- } );
+ });
+ changeCity()
 
 //* Use .on as event listener for submit type
 $("form").on("submit", function (e) {
