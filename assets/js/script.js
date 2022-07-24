@@ -16,7 +16,7 @@ function highlightCurrentHour() {
   $("body").addClass(`now-${currentHour}`); 
    }
 
-setInterval(highlightCurrentHour, 1000); // call for the current hour every second
+setInterval(highlightCurrentHour, 10000); // call for the current hour every second
 
 
 // this saves the list of cities
@@ -81,7 +81,7 @@ fetch(`${urlWeather}${api_key_2}`)
     console.log(data)
   });
 
-  //* Use .on as event listener for submit type
+//* Use .on as event listener for submit type
 $("form").on("submit", function (e) {
   e.preventDefault();
 
@@ -98,7 +98,7 @@ $("document").ready(function (e) {
     let value = localStorage.getItem(element.id);
     element.value = value;
   });
-})
+});
 
 $( function() {
   var availableTags = [
