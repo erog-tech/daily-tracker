@@ -66,7 +66,7 @@ fetch(`${urlWeather}${api_key_2}`)
 
     // this is used to display temperature
     $('.temp').each(function () {
-      let temp = data.current.temp + ' ' + '°C'
+      let temp = Math.round(data.current.temp) + ' ' + '°C'
       $('.temp').text(temp)
     });
 
