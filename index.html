@@ -30,11 +30,11 @@
 
   <header id="headerArea">
     <div class="row align-justify">
-      <div class="small-10 columns">
+      <div class="small-12 large-9 columns">
         <h1>Daily Tracker</h1>
         <h3 id="todayDate"></h3>
       </div>
-      <div class="columns small-2">
+      <div class="columns small-12 large-3">
         <div id="todayWeather">
           <div id="icon"><img class="wicon" src="" alt="Weather icon"></div>
           <h3 class="city"></h3>
@@ -44,194 +44,150 @@
     </div>
   </header>
 
-  <main>
-    <!-- This is for the whole section  -->
-    <div class="row table-section">
-      <div class="columns small-10">
+  <main class="row">
 
-        <div class="timetable">
-          <form class= "add-event" action="">
-        <!-- this is for the table -->
-        <div class="row">
-          <div class="columns small-6 large-1 ">08:00
-          </div>
-          <div class="columns small-6 large-8 ">
-            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
-          </div>
-          <div class="columns small-12 large-3 ">
-            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
-          </div>
-        </div>
+    <!-- Schedule section  -->
+  <div class="timetable columns small-12 large-8">
+    <form class="add-event" action="">
 
-        <div class="row">
-          <div class="columns small-6 large-1 ">09:00
-          </div>
-          <div class="columns small-6 large-8 ">
-            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
-          </div>
-          <div class="columns small-12 large-3 ">
-            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
-          </div>
-        </div>
+    <!-- These are the hour rows -->
 
-        <div class="row">
-          <div class="columns small-6 large-1 ">10:00
-          </div>
-          <div class="columns small-6 large-8 ">
-            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
-          </div>
-          <div class="columns small-12 large-3 ">
-            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="columns small-6 large-1 ">11:00
-          </div>
-          <div class="columns small-6 large-8 ">
-            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
-          </div>
-          <div class="columns small-12 large-3 ">
-            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="columns small-6 large-1 ">12:00
-          </div>
-          <div class="columns small-6 large-8 ">
-            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
-          </div>
-          <div class="columns small-12 large-3 ">
-            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="columns small-6 large-1 ">13:00
-          </div>
-          <div class="columns small-6 large-8 ">
-            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
-          </div>
-          <div class="columns small-12 large-3 ">
-            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="columns small-6 large-1 ">14:00
-          </div>
-          <div class="columns small-6 large-8 ">
-            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
-          </div>
-          <div class="columns small-12 large-3 ">
-            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="columns small-6 large-1 ">15:00
-          </div>
-          <div class="columns small-6 large-8 ">
-            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
-          </div>
-          <div class="columns small-12 large-3 ">
-            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="columns small-6 large-1 ">16:00
-          </div>
-          <div class="columns small-6 large-8 ">
-            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
-          </div>
-          <div class="columns small-12 large-3 ">
-            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="columns small-6 large-1 ">17:00
-          </div>
-          <div class="columns small-6 large-8 ">
-            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
-          </div>
-          <div class="columns small-12 large-3 ">
-            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="columns small-6 large-1 ">18:00
-          </div>
-          <div class="columns small-6 large-8 ">
-            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
-          </div>
-          <div class="columns small-12 large-3 ">
-            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="columns small-6 large-1 ">19:00
-          </div>
-          <div class="columns small-6 large-8 ">
-            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
-          </div>
-          <div class="columns small-12 large-3 ">
-            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="columns small-6 large-1 ">20:00
-          </div>
-          <div class="columns small-6 large-8 ">
-            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
-          </div>
-          <div class="columns small-12 large-3 ">
-            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="columns small-6 large-1 ">21:00
-          </div>
-          <div class="columns small-6 large-8 ">
-            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
-          </div>
-          <div class="columns small-12 large-3 ">
-            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="columns small-6 large-1 ">22:00
-          </div>
-          <div class="columns small-6 large-8 ">
-            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
-          </div>
-          <div class="columns small-12 large-3 ">
-            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="columns small-6 large-1 ">23:00
-          </div>
-          <div class="columns small-6 large-8 ">
-            <textarea name="AM8" id="AM8" class="task-entry col-9"></textarea>
-          </div>
-          <div class="columns small-12 large-3 ">
-            <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
-          </div>
-        </div>
+    <div class="grid-x">
+      <div class="cell auto grid-x align-middle">
+        08:00
       </div>
+      <div id="hr-8" class="nth2 cell small-10 large-10">
+        <textarea name="AM8" id="AM8"></textarea>
+      </div>
+      <div class="cell auto grid-x align-middle">
+        <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
+      </div>
+    </div>
+
+    <div class="grid-x">
+      <div class="cell auto grid-x align-middle">
+        09:00
+      </div>
+      <div id="hr-9" class="nth2 cell small-10 large-10">
+        <textarea name="AM8" id="AM8" class=""></textarea>
+      </div>
+      <div class="cell auto grid-x align-middle">
+        <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
+      </div>
+    </div>
+
+    <div class="grid-x">
+      <div class="cell auto grid-x align-middle">
+        10:00
+      </div>
+      <div id="hr-10" class="nth2 cell small-10 large-10">
+        <textarea name="AM8" id="AM8" class=""></textarea>
+      </div>
+      <div class="cell auto grid-x align-middle">
+        <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
+      </div>
+    </div>
+
+    <div class="grid-x">
+      <div class="cell auto grid-x align-middle">
+        11:00
+      </div>
+      <div id="hr-11" class="nth2 cell small-10 large-10">
+        <textarea name="AM8" id="AM8" class=""></textarea>
+      </div>
+      <div class="cell auto grid-x align-middle">
+        <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
+      </div>
+    </div>
+
+    <div class="grid-x">
+      <div class="cell auto grid-x align-middle">
+        12:00
+      </div>
+      <div id="hr-12" class="nth2 cell small-10 large-10">
+        <textarea name="AM8" id="AM8" class=""></textarea>
+      </div>
+      <div class="cell auto grid-x align-middle">
+        <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
+      </div>
+    </div>
+
+    <div class="grid-x">
+      <div class="cell auto grid-x align-middle">
+        13:00
+      </div>
+      <div id="hr-13" class="nth2 cell small-10 large-10">
+        <textarea name="AM8" id="AM8" class=""></textarea>
+      </div>
+      <div class="cell auto grid-x align-middle">
+        <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
+      </div>
+    </div>
+
+    <div class="grid-x">
+      <div class="cell auto grid-x align-middle">
+        14:00
+      </div>
+      <div id="hr-14" class="nth2 cell small-10 large-10">
+        <textarea name="AM8" id="AM8" class=""></textarea>
+      </div>
+      <div class="cell auto grid-x align-middle">
+        <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
+      </div>
+    </div>
+
+    <div class="grid-x">
+      <div class="cell auto grid-x align-middle">
+        15:00
+      </div>
+      <div id="hr-15" class="nth2 cell small-10 large-10">
+        <textarea name="AM8" id="AM8" class=""></textarea>
+      </div>
+      <div class="cell auto grid-x align-middle">
+        <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
+      </div>
+    </div>
+
+    <div class="grid-x">
+      <div class="cell auto grid-x align-middle">
+        16:00
+      </div>
+      <div id="hr-16" class="nth2 cell small-10 large-10">
+        <textarea name="AM8" id="AM8" class=""></textarea>
+      </div>
+      <div class="cell auto grid-x align-middle">
+        <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
+      </div>
+    </div>
+
+    <div class="grid-x">
+      <div class="cell auto grid-x align-middle">
+        17:00
+      </div>
+      <div id="hr-17" class="nth2 cell small-10 large-10">
+        <textarea name="AM8" id="AM8" class=""></textarea>
+      </div>
+      <div class="cell auto grid-x align-middle">
+        <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
+      </div>
+    </div>
+
+    <div class="grid-x">
+      <div class="cell auto grid-x align-middle">
+        18:00
+      </div>
+      <div id="hr-18" class="nth2 cell small-10 large-10">
+        <textarea name="AM8" id="AM8" class=""></textarea>
+      </div>
+      <div class="cell auto grid-x align-middle">
+        <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
+      </div>
+    </div>
 
       <!-- Close content rows, then form, then container div-->   
     </form>
   </div>
+
       <!-- This is for the city weather -->
       <div class="columns small-2">
         <div class="ui-widget">
@@ -250,8 +206,17 @@
           <h3>About the image</h3>
           <h6 id="explanation"></h6>
         </div>
-      </div>
-    </div>
+        
+<!-- About the APOD section -->
+    <div class="apod">
+      <h3>About the image</h3>
+      <h6 id="explanation"></h6>
+    </div>    
+  
+  </div> 
+
+
+
   </main>
 
   <footer class="columns">
@@ -261,6 +226,7 @@
       <a href="https://github.com/erog-tech/daily-tracker">GitHub repo for Daily Tracker</a></p>  
   </div>
   </footer>
+
   <!-- External js  -->
   
   <script src="https://cdn.jsdelivr.net/npm/luxon@2.4.0/build/global/luxon.min.js"></script>
@@ -270,8 +236,11 @@
   <script src="https://kit.fontawesome.com/53330a4c0d.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
     integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+
+<!-- Internal js  -->  
   <script src="./assets/js/config.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
