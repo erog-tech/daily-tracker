@@ -7,6 +7,7 @@
     --horizon-blue: #55859f;
     --night-blue: #115376;
     --pitch-black: #000000; 
+    font-size: 1rem;
 }
 
 /* Style header elements, incl. background image  */
@@ -44,6 +45,16 @@ h1 {
     background-color: var(--clear-blue);
 }
 
+/* Style weather icon */
+.wicon {
+    display: flex;
+    justify-content: center;
+    border: none;
+    padding: 0;
+    margin: auto;
+    width: 50%;
+}
+
 /* Style main container and its content */
 
 main {
@@ -55,6 +66,10 @@ main {
 
 /* Start table styling */
 
+.cell {
+    max-height: 3rem;
+}
+
 /* Style text input area  */
 textarea {
     background: transparent;
@@ -63,14 +78,14 @@ textarea {
     color: var(--pitch-black);
     font-weight: bold;
     font-size: 1rem;
-    padding: 5px;
-    /* white-space: pre-wrap;
-    height: 1rem; */
+    white-space: pre-wrap;
+    /* height: .5rem; */
   }
 
 /* Show past, current, and future hours */
 .nth2 {
     background-color: var(--cloud-gray);
+    margin-bottom: 7px;
   }
 
 .now-8 #hr-8, 
@@ -149,6 +164,7 @@ textarea {
 /* Style FontAwesome icon color and mouseover */
 .btn, button, input[type="submit"], input[type="reset"] {
     background: none;
+    margin-left: 5px;
     padding: 5px;
     font: inherit;
     cursor: pointer;
@@ -158,7 +174,17 @@ textarea {
 /* End table styling */
 
 
-/* Style "City Weather" box */
+/* Style "Global weather" and "About APOD" boxes */
+
+h2 {
+    font-size: 2rem;
+    margin: -10px -10px 10px -10px;
+    padding: 0px;
+    background-color: var(--night-blue);
+    color: var(--sky-blue);
+    text-align: center;
+}
+
 
 .ui-widget {
     background-color: var(--clear-blue);
@@ -167,7 +193,6 @@ textarea {
     margin-bottom: 20px;
 }
 
-/* Style "About APOD" box */
 .apod {
     background-color: var(--clear-blue);
     border: 2px solid var(--sky-blue);
@@ -175,14 +200,6 @@ textarea {
     margin-bottom: 20px;
 }
 
-.apod h3 {
-    /* width: 100%; */
-    margin: -10px -10px 10px -10px;
-    padding: 0px;
-    background-color: var(--night-blue);
-    color: var(--sky-blue);
-    text-align: center;
-}
 
   /* Style footer and text */
 footer {
@@ -208,23 +225,5 @@ footer {
 .fa-floppy-disk {
     color: var(--dusk-blue)
 }
-/* Style the textarea for div color, increase font size and weight */
 
-/* Style weather icon */
-.wicon {
-    display: flex;
-    justify-content: center;
-    border: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
 
-/* Style weather header */
-.ui-widget h2 {
-    width: 100%;
-    margin: 0px 0px 10px 0px;
-    padding: 0px;
-    background-color: var(--night-blue);
-    color: var(--sky-blue);
-    text-align: center;
