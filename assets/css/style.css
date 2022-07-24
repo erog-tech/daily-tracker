@@ -64,6 +64,8 @@ textarea {
     font-weight: bold;
     font-size: 1rem;
     padding: 5px;
+    /* white-space: pre-wrap;
+    height: 1rem; */
   }
 
 /* Show past, current, and future hours */
