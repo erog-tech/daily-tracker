@@ -226,5 +226,8 @@ footer {
 .fa-floppy-disk {
     color: var(--dusk-blue)
 }
-
+.imageurl{
+    
+    margin: 25px;
+}
 
