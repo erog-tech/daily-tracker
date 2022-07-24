@@ -30,7 +30,7 @@
 
   <header id="headerArea">
     <div class="row align-justify">
-      <div class="small-12 large-9 columns">
+      <div class="columns small-12 large-9 ">
         <h1>Daily Tracker</h1>
         <h3 id="todayDate"></h3>
       </div>
@@ -69,7 +69,7 @@
         09:00
       </div>
       <div id="hr-9" class="nth2 cell small-10 large-10">
-        <textarea name="AM8" id="AM8" class=""></textarea>
+        <textarea name="AM9" id="AM9" class=""></textarea>
       </div>
       <div class="cell auto grid-x align-middle">
         <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
@@ -81,7 +81,7 @@
         10:00
       </div>
       <div id="hr-10" class="nth2 cell small-10 large-10">
-        <textarea name="AM8" id="AM8" class=""></textarea>
+        <textarea name="AM10" id="AM10" class=""></textarea>
       </div>
       <div class="cell auto grid-x align-middle">
         <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
@@ -93,7 +93,7 @@
         11:00
       </div>
       <div id="hr-11" class="nth2 cell small-10 large-10">
-        <textarea name="AM8" id="AM8" class=""></textarea>
+        <textarea name="AM11" id="AM11" class=""></textarea>
       </div>
       <div class="cell auto grid-x align-middle">
         <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
@@ -105,7 +105,7 @@
         12:00
       </div>
       <div id="hr-12" class="nth2 cell small-10 large-10">
-        <textarea name="AM8" id="AM8" class=""></textarea>
+        <textarea name="PM12" id="PM12" class=""></textarea>
       </div>
       <div class="cell auto grid-x align-middle">
         <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
@@ -117,7 +117,7 @@
         13:00
       </div>
       <div id="hr-13" class="nth2 cell small-10 large-10">
-        <textarea name="AM8" id="AM8" class=""></textarea>
+        <textarea name="PM13" id="PM13" class=""></textarea>
       </div>
       <div class="cell auto grid-x align-middle">
         <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
@@ -129,7 +129,7 @@
         14:00
       </div>
       <div id="hr-14" class="nth2 cell small-10 large-10">
-        <textarea name="AM8" id="AM8" class=""></textarea>
+        <textarea name="PM14" id="PM14" class=""></textarea>
       </div>
       <div class="cell auto grid-x align-middle">
         <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
@@ -141,7 +141,7 @@
         15:00
       </div>
       <div id="hr-15" class="nth2 cell small-10 large-10">
-        <textarea name="AM8" id="AM8" class=""></textarea>
+        <textarea name="PM15" id="PM15" class=""></textarea>
       </div>
       <div class="cell auto grid-x align-middle">
         <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
@@ -153,7 +153,7 @@
         16:00
       </div>
       <div id="hr-16" class="nth2 cell small-10 large-10">
-        <textarea name="AM8" id="AM8" class=""></textarea>
+        <textarea name="PM16" id="PM16" class=""></textarea>
       </div>
       <div class="cell auto grid-x align-middle">
         <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
@@ -165,7 +165,7 @@
         17:00
       </div>
       <div id="hr-17" class="nth2 cell small-10 large-10">
-        <textarea name="AM8" id="AM8" class=""></textarea>
+        <textarea name="PM17" id="PM17" class=""></textarea>
       </div>
       <div class="cell auto grid-x align-middle">
         <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
@@ -177,7 +177,7 @@
         18:00
       </div>
       <div id="hr-18" class="nth2 cell small-10 large-10">
-        <textarea name="AM8" id="AM8" class=""></textarea>
+        <textarea name="PM18" id="PM18" class=""></textarea>
       </div>
       <div class="cell auto grid-x align-middle">
         <button class="btn" type="submit"><i id="btn8" class="fa-solid fa-floppy-disk fa-2xl"></i></button>
@@ -189,7 +189,7 @@
   </div>
 
       <!-- This is for the city weather -->
-      <div class="columns small-2">
+      <div class="columns small-12 large-4">
         <div class="ui-widget">
           <h2>Global weather</h2>
           <label for="tags"></label>
@@ -209,21 +209,11 @@
           <h4 class="time"></h4>
         </div>
         <!-- This is for the APOD explanation -->
-        <div class="apod ">
-          <h3>About the image</h3>
+        <div class="apod">
+          <h2>About the image</h2>
           <h6 id="explanation"></h6>
-        </div>
-        
-<!-- About the APOD section -->
-    <div class="apod">
-      <h3>About the image</h3>
-      <h6 id="explanation"></h6>
-    </div>    
-  
+        </div>  
   </div> 
-
-
-
   </main>
 
   <footer class="columns">
@@ -237,7 +227,6 @@
   <!-- External js  -->
   
   <script src="https://cdn.jsdelivr.net/npm/luxon@2.4.0/build/global/luxon.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"
     crossorigin="anonymous"></script> -->
   <script src="https://kit.fontawesome.com/53330a4c0d.js" crossorigin="anonymous"></script>
