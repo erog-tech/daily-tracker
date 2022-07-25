@@ -18,14 +18,11 @@ function highlightCurrentHour() {
 
 setInterval(highlightCurrentHour, 10000); // call for the current hour every second
 
-
-// this saves the list of cities
-
-
 // This is used for Calling NASA API
 const url = 'https://api.nasa.gov/planetary/apod?api_key='
 const api_key = config.NASA_API_KEY
 
+// Using Fetch to call URL and API key
 fetch(`${url}${api_key}`)
   .then(function (response) {
     return response.json();
@@ -45,6 +42,8 @@ fetch(`${url}${api_key}`)
     console.log(data)
   });
 
+
+// This will store the value of API key after the city is chosen
 let urlWeather = ""
 
 // This is used for Calling Open Weather API
@@ -67,12 +66,13 @@ function changeCity(urlWeather = 'https://api.openweathermap.org/data/2.5/onecal
 //   display();
 // }
 
+// This fetches the weather URL and API key
   fetch(`${urlWeather}${api_key_2}`)
     .then(function (response) {
       return response.json();
       })
     .then(function (data) {
-      // this used to display icon
+      // this is used to display icon
       let iconurl = "http://openweathermap.org/img/w/" + data.current.weather[0].icon + ".png"
       $('.wicon').attr('src', iconurl);
   
