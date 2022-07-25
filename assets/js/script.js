@@ -48,7 +48,7 @@ fetch(`${url}${api_key}`)
 let urlWeather = ""
 
 // This is used for Calling Open Weather API
-function changeCity(urlWeather = 'https://api.openweathermap.org/data/2.5/onecall?lat=48.8534&lon=2.3488&units=metric&appid=') {
+function changeCity(urlWeather = 'https://api.openweathermap.org/data/2.5/onecall?lat=52.5244&lon=13.4105&units=metric&appid=') {
   const api_key_2 = config.OPEN_WEATHER_API_KEY
   let combineUrl = `${urlWeather}${api_key_2}`
   
@@ -145,7 +145,7 @@ $('#myselect').on('change', function (e) {
   var valueSelected = this.value;
   
   if (valueSelected == '1') {
-    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=48.8534&lon=2.3488&units=metric&appid=');
+    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=52.5244&lon=13.4105&units=metric&appid=');
   }
   else if (valueSelected == '2') {
     changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=28.66&lon=77.21&units=metric&appid=');
@@ -157,10 +157,10 @@ $('#myselect').on('change', function (e) {
     changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=51.5085&lon=-0.1257&units=metric&appid=');
   }
   else if (valueSelected == '5') {
-    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=52.5244&lon=13.4105&units=metric&appid=');
+    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=48.8534&lon=2.3488&units=metric&appid=');
   }
   else{
-    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=48.8534&lon=2.3488&units=metric&appid=')
+    changeCity('https://api.openweathermap.org/data/2.5/onecall?lat=52.5244&lon=13.4105&units=metric&appid=')
   }
  });
  changeCity()
