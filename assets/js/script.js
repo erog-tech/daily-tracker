@@ -89,12 +89,14 @@ function changeCity(urlWeather = 'https://api.openweathermap.org/data/2.5/onecal
   
     // this is used to display date
     $('.date').each(function () {
-      $('.date').text(date) // using Luxon const date
+      let date = new Date(data.current.dt * 1000).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+      console.log($('.date').text(date))
     });
 
     // this is used to display time
     $('.time').each(function () {
-      $('.time').text(time) // using Luxon const time
+      let time = new Date(data.current.dt * 1000).toLocaleDateString("en-GB", {weekday: "short", hour: "numeric", minute: "numeric"});
+      $('.time').text(time)
     });
 
 // This code will show a weather icon per hour; it is not yet ready for publishing
