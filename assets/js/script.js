@@ -52,19 +52,20 @@ function changeCity(urlWeather = 'https://api.openweathermap.org/data/2.5/onecal
   const api_key_2 = config.OPEN_WEATHER_API_KEY
   let combineUrl = `${urlWeather}${api_key_2}`
   
-  // this is used to display current location of the city
-  if (window.navigator && window.navigator.geolocation) {
-    window.navigator.geolocation.getCurrentPosition(function(position) {
-        $.getJSON(combineUrl, {
-            lat: position.coords.latitude,
-            lon: position.coords.longitude,
-            units: 'metric',
-            appid: 'APIKEY'
-        }).done(display())
-    })
-}
-
-function display() {
+//   // this is used to display current location of the city
+//   if (window.navigator && window.navigator.geolocation) {
+//     window.navigator.geolocation.getCurrentPosition(function(position) {
+//         $.getJSON(combineUrl, {
+//             lat: position.coords.latitude,
+//             lon: position.coords.longitude,
+//             units: 'metric',
+//             appid: 'APIKEY'
+//         }).done(display())
+//     })
+// }
+// else {
+//   display();
+// }
 
   fetch(`${urlWeather}${api_key_2}`)
     .then(function (response) {
@@ -134,7 +135,6 @@ function display() {
     console.log(data)
   });
 }  
-} 
 
 // Change the city on select
 $('#myselect').on('change', function (e) {
