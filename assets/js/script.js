@@ -32,10 +32,12 @@ fetch(`${url}${api_key}`)
   })
   .then(function (data) {
 
-    // This is used for showing the Nasa image
+    // This is used for showing the NASA image
     let imageUrl = data.hdurl;
     $(".headerArea").css("background-image", "url(" + imageUrl + ")");
     $('.headerArea').css('background-attachment','fixed');
+
+    // This places a link to the full NASA image in the info box
     $('.imageurl').attr('href', imageUrl);
 
     // This is used for showing the text of about image
