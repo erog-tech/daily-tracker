@@ -94,38 +94,40 @@ function display() {
       $('.time').text(time) // using Luxon const time
     });
 
-    let iconurl1 = "http://openweathermap.org/img/w/" + data.hourly[8].weather[0].icon + ".png"
-      $('.wicon8').attr('src', iconurl1);
+// This code will show a weather icon per hour; it is not yet ready for publishing
 
-    let iconurl2 = "http://openweathermap.org/img/w/" + data.hourly[9].weather[0].icon + ".png"
-      $('.wicon9').attr('src', iconurl2);
+    // let iconurl1 = "http://openweathermap.org/img/w/" + data.hourly[8].weather[0].icon + ".png"
+    //   $('.wicon8').attr('src', iconurl1);
 
-    let iconurl3 = "http://openweathermap.org/img/w/" + data.hourly[10].weather[0].icon + ".png"
-      $('.wicon10').attr('src', iconurl3);
+    // let iconurl2 = "http://openweathermap.org/img/w/" + data.hourly[9].weather[0].icon + ".png"
+    //   $('.wicon9').attr('src', iconurl2);
 
-    let iconurl4 = "http://openweathermap.org/img/w/" + data.hourly[11].weather[0].icon + ".png"
-      $('.wicon11').attr('src', iconurl4);
+    // let iconurl3 = "http://openweathermap.org/img/w/" + data.hourly[10].weather[0].icon + ".png"
+    //   $('.wicon10').attr('src', iconurl3);
 
-    let iconurl5 = "http://openweathermap.org/img/w/" + data.hourly[12].weather[0].icon + ".png"
-      $('.wicon12').attr('src', iconurl5);
+    // let iconurl4 = "http://openweathermap.org/img/w/" + data.hourly[11].weather[0].icon + ".png"
+    //   $('.wicon11').attr('src', iconurl4);
+
+    // let iconurl5 = "http://openweathermap.org/img/w/" + data.hourly[12].weather[0].icon + ".png"
+    //   $('.wicon12').attr('src', iconurl5);
       
-    let iconurl6 = "http://openweathermap.org/img/w/" + data.hourly[13].weather[0].icon + ".png"
-      $('.wicon13').attr('src', iconurl6);
+    // let iconurl6 = "http://openweathermap.org/img/w/" + data.hourly[13].weather[0].icon + ".png"
+    //   $('.wicon13').attr('src', iconurl6);
 
-    let iconurl7 = "http://openweathermap.org/img/w/" + data.hourly[14].weather[0].icon + ".png"
-      $('.wicon14').attr('src', iconurl7);
+    // let iconurl7 = "http://openweathermap.org/img/w/" + data.hourly[14].weather[0].icon + ".png"
+    //   $('.wicon14').attr('src', iconurl7);
 
-    let iconurl8 = "http://openweathermap.org/img/w/" + data.hourly[15].weather[0].icon + ".png"
-      $('.wicon15').attr('src', iconurl8);
+    // let iconurl8 = "http://openweathermap.org/img/w/" + data.hourly[15].weather[0].icon + ".png"
+    //   $('.wicon15').attr('src', iconurl8);
 
-    let iconurl9 = "http://openweathermap.org/img/w/" + data.hourly[16].weather[0].icon + ".png"
-      $('.wicon16').attr('src', iconurl9);
+    // let iconurl9 = "http://openweathermap.org/img/w/" + data.hourly[16].weather[0].icon + ".png"
+    //   $('.wicon16').attr('src', iconurl9);
 
-    let iconurl10 = "http://openweathermap.org/img/w/" + data.hourly[17].weather[0].icon + ".png"
-      $('.wicon17').attr('src', iconurl10);
+    // let iconurl10 = "http://openweathermap.org/img/w/" + data.hourly[17].weather[0].icon + ".png"
+    //   $('.wicon17').attr('src', iconurl10);
 
-    let iconurl11 = "http://openweathermap.org/img/w/" + data.hourly[18].weather[0].icon + ".png"
-      $('.wicon18').attr('src', iconurl11);
+    // let iconurl11 = "http://openweathermap.org/img/w/" + data.hourly[18].weather[0].icon + ".png"
+    //   $('.wicon18').attr('src', iconurl11);
 
     console.log(data)
   });
