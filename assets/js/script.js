@@ -14,6 +14,9 @@
  * Stay consistent with the use of "double" or 'single' quotes.
  *
  * Stick to 'camelCase' for naming variables in JS.
+ *
+ * It is good practice to format your file to correct the formatting and
+ * indentation before a commit.
  */
 
 // This calls Luxon API to keep current day and time
